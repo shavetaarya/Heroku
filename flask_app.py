@@ -1,15 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Apr 20 13:14:51 2018
-
-@author: ashaveta
-"""
-
 #!/usr/bin/env python
 
 import urllib
 import json
 import os
+import pandas as pd
 import csv
 
 from flask import Flask
@@ -32,124 +26,47 @@ def webhook():
     res = json.dumps(res, indent=4)
     print(res)
     r = make_response(res)
+#    r.headers['Content-Type'] = 'application/json'
     return r
 
 def makeWebhookResult(req):
-    if req.get("result").get("action") == "Number_Verify":
-       result = req.get("result")
-       context = result.get("contexts")
-       context = json.dumps(context, indent=4)
-       context = json.loads(context)
-       print(context)
-       parameters = (context[0]['parameters'])
-       print(parameters)
-       number = parameters.get("number")
-       print(number)
-       Customer = ("customer.csv")
-       with open(Customer) as csvfile:
-        reader = csv.reader(csvfile,delimiter=',')
-        for row in reader: 
-           print (row[0]) 
-           if str(number) == str(row[0]):
-               print(row)
-               name = row[4]
-               speech=("Welcome " + name + ", How May I help you today?")
-               break 
+    if req.get("result").get("action") != "KMS_read":
+        return {}
+    result = req.get("result")
+    context = result.get("contexts")
+    context = json.dumps(context, indent=4)
+    context = json.loads(context)
+    print(context)
+    parameters = (context[0]['parameters'])
+    print(parameters)
+    number = parameters.get("number")
+    print(number)
+    check_no = 'Check ' + str(number)
+    KMS = ("KMS1.csv")
+    with open(KMS) as csvfile:
+       reader = csv.reader(csvfile,delimiter=',')
+       for row in reader:
+           if check_no == row[0]:
+              print(row[1])
+              speech=row[1]
+              break 
            else:
-               speech = 'I could not find this account number in my records. Please re-enter' 
-
-        print(speech)
-        print("Response:")
-        print("This is the reply from Python webhook"  )
-        return {
-          "speech": speech,
-          "displayText": speech,
-        }
-    if req.get("result").get("action") == "Balance_check":
-       print ("checking balance")
-       result = req.get("result")
-       context = result.get("contexts")
-       context = json.dumps(context, indent=4)
-       context = json.loads(context)
-       parameters = (context[0]['parameters'])
-       number = parameters.get("number")
-       print(number)
-       Customer = ("customer.csv")
-       with open(Customer) as csvfile:
-        reader = csv.reader(csvfile,delimiter=',')
-        for row in reader: 
-           print (row[0]) 
-           if str(number) == str(row[0]):
-              speech=("Your account balance is " + row[1] + " $")
-       print(speech)
-       print("Response:")
-       return {
-          "speech": speech,
-          "displayText": speech,
-         }
-    if req.get("result").get("action") == "loan_Amount":
-       print ("checking loan due")
-       result = req.get("result")
-       context = result.get("contexts")
-       context = json.dumps(context, indent=4)
-       context = json.loads(context)
-       parameters = (context[0]['parameters'])
-       number = parameters.get("number")
-       Customer = ("customer.csv")
-       with open(Customer) as csvfile:
-        reader = csv.reader(csvfile,delimiter=',')
-        for row in reader: 
-           print (row[0]) 
-           if str(number) == str(row[0]):
-              speech=("Your loan due this month is " + row[5] + " $ on " + row[6] )
-       print(speech)
-       print("Response:")
-       return {
-          "speech": speech,
-          "displayText": speech,
-         }
-    if req.get("result").get("action") == "account_Spending":
-       print ("checking spend")
-       result = req.get("result")
-       context = result.get("contexts")
-       context = json.dumps(context, indent=4)
-       context = json.loads(context)
-       parameters = (context[0]['parameters'])
-       number = parameters.get("number")
-       Customer = ("customer.csv")
-       with open(Customer) as csvfile:
-        reader = csv.reader(csvfile,delimiter=',')
-        for row in reader: 
-           print (row[0]) 
-           if str(number) == str(row[0]):
-              speech=("Your total spend this month is " + row[3] + " $ "  )
-       print(speech)
-       print("Response:")
-       return {
-          "speech": speech,
-          "displayText": speech,
-         }
-    if req.get("result").get("action") == "LC_expiry":
-       print ("checking expiry")
-       result = req.get("result")
-       context = result.get("contexts")
-       context = json.dumps(context, indent=4)
-       context = json.loads(context)
-       parameters = (context[0]['parameters'])
-       number = parameters.get("number")
-       Customer = ("customer.csv")
-       with open(Customer) as csvfile:
-        reader = csv.reader(csvfile,delimiter=',')
-        for row in reader: 
-           print (row[0]) 
-           if str(number) == str(row[0]):
-              speech=("Your LC Expiry date is " + row[2]   )
-       print(speech)
-       print("Response:")
-       return {
-          "speech": speech,
-          "displayText": speech,
-         }
+               speech = 'I will not be able to help you with this query. Please contact human operator at +91-123456789' 
+    
+#    cost = {'Andhra Bank':'6.85%', 'Allahabad Bank':'6.75%', 'Axis Bank':'6.5%', 'Bandhan bank':'7.15%', 'Bank of Maharashtra':'6.50%', 'Bank of Baroda':'6.90%', 'Bank of India':'6.60%', 'Bharatiya Mahila Bank':'7.00%', 'Canara Bank':'6.50%', 'Central Bank of India':'6.60%', 'City Union Bank':'7.10%', 'Corporation Bank':'6.75%', 'Citi Bank':'5.25%', 'DBS Bank':'6.30%', 'Dena Bank':'6.80%', 'Deutsche Bank':'6.00%', 'Dhanalakshmi Bank':'6.60%', 'DHFL Bank':'7.75%', 'Federal Bank':'6.70%', 'HDFC Bank':'5.75% to 6.75%', 'Post Office':'7.10%', 'Indian Overseas Bank':'6.75%', 'ICICI Bank':'6.25% to 6.9%', 'IDBI Bank':'6.65%', 'Indian Bank':'4.75%', 'Indusind Bank':'6.85%', 'J&K Bank':'6.75%', 'Karnataka Bank':'6.50 to 6.90%', 'Karur Vysya Bank':'6.75%', 'Kotak Mahindra Bank':'6.6%', 'Lakshmi Vilas Bank':'7.00%', 'Nainital Bank':'7.90%', 'Oriental Bank of Commerce':'6.85%', 'Punjab National Bank':'6.75%', 'Punjab and Sind Bank':'6.4% to 6.80%', 'Saraswat bank':'6.8%', 'South Indian Bank':'6% to 6.75%', 'State Bank of India':'6.75%', 'Syndicate Bank':'6.50%', 'Tamilnad Mercantile Bank Ltd':'6.90%', 'UCO bank':'6.75%', 'United Bank Of India':'6%', 'Vijaya Bank':'6.50%', 'Yes Bank':'7.10%'}
+#
+#    speech = "The interest rate of " + zone + " is " + str(cost[zone])
+#    speech = str((error_data['Resolution'] ))
+    print(speech)
+    print("Response:")
+    print("This is the reply from Python webhook"  )
+    return {
+        "speech": speech,
+        "displayText": speech,
+        #"data": {},
+        #"contextOut": [],
+#        "source": "BankRates"
+    }
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))

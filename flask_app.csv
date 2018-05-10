@@ -1,0 +1,149 @@
+Check_num,Resolution
+Check 1," Confirm with the clien- If MoP applies:
+- If yes (i.e. exemption in place) - self attest to the exception in SPM
+- If no - obtain LEI from client, do not trade until LEI is provided"
+Check 2," Check with Client Regulatory Services team to confirm If the LEI is present and correct in HUB:
+- If correct (i.e. DQ issue) - request 3rd party approval
+- If incorrect (i.e. LEI not set up) - do not trade until LEI is provided"
+Check 3," Check with Client Regulatory Services team to confirm If (i) the LEI and (ii) client type are present and correct in HUB:
+- If correct (i.e. DQ issue) - request 3rd party approval
+- If incorrect (i.e. LEI not set up) - do not trade until LEI is provided"
+Check 4," Check with Client Regulatory Services team to confirm If the LEI or Natural Person ID is present and correct in HUB:
+- If correct (i.e. DQ issue) - request 3rd party approval
+- If incorrect (i.e. LEI/Natural Person ID are not set up) - do not trade until provided"
+Check 5," Check with Client Regulatory Services team to confirm LEI status in HUB:
+- If correct (i.e. DQ issue) - request 3rd party approval
+- If invalid - do not trade until corrected"
+Check 6," Check in APD If product is set up:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If new product (i.e. not set up in APD) - follow existing new product approval process offline. Do not trade until product has been approved"
+Check 7,"Check in APD If booking entity is set up for this product:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If incorrect (i.e. product not approved for booking entity) - do not trade"
+Check 8,"Check in APD If product is set up:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If new product (i.e. not set up in APD) - follow existing new product approval process offline. Do not trade until product has been approved"
+Check 9," Check product status in APD:
+- If valid (i.e. DQ issues) - request 3rd party approval
+- If invalid - do not trade"
+Check 10," Check in APD If product is set up:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If new product (i.e. not set up in APD) - follow existing new product approval process offline. Do not trade until product has been approved"
+Check 11," Check product status in APD:
+- If valid (i.e. DQ issues) - request 3rd party approval
+- If invalid - do not trade"
+Check 12," Check in APD If booking entity is set up for this product:
+ - If correct (i.e. DQ issues) - request 3rd party approval
+ - If incorrect (i.e. product not approved for booking entity) - do not trade"
+Check 13," Check in APD If selected currency is set up for this product:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If incorrect (i.e. currency not approved for this product) - do not trade"
+Check 14," Check in APD If selected benchmark is set up for this product:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If incorrect (i.e. benchmark not approved for this product) - do not trade"
+Check 15," Check in APD If selected tenor is set up for this product:
+- If correct (i.e. DQ issues) - request 3rd party approval 
+- If incorrect (i.e. tenor not approved for this product) - do not trade"
+Check 16,check client data in HUB for ISDA (field: relationship Docs in place)
+Check 17,DO NOT BOTHER
+Check 18,DO NOT BOTHER
+Check 19,Not relevant for Lloyds 
+Check 20,Go trade on a venue or DO NOT TRADE
+Check 21,Not relevant for Lloyds 
+Check 22,Not relevant for Lloyds 
+Check 23,Not relevant for Lloyds 
+Check 24,check client data in HUB for ISDA (field: relationship Docs in place)
+Check 25,check client data in HUB for ISDA (field: relationship Docs in place) - this will rarely come up as the data is in place for lloyds / bos entiites
+Check 26,check client data in HUB for ISDA (field: relationship Docs in place)
+Check 27,DO NOT BOTHER
+Check 28,Need a CDEA in place to execute the trade
+Check 29,Not relevant anymore as the Front Loading window  has passed and Clearing has taken effect
+Check 30,"Check with Client Regulatory Services team to confirm If the counterparty classification is set up in HUB:
+-  If correct (i.e. DQ issues) - request 3rd party approval
+- If missing (i.e. cpty classification not in place) - contact Client Regulatory Services team to obtain from client. Do not trade until the classification is confirmed"
+Check 31," Check with Client Regulatory Services team to confirm If the CSA is present and correct in HUB:
+-  If correct (i.e. DQ issues) - request 3rd party approval
+- If missing (i.e. CSA is not in place) - contact Legal to execute agreement with client. Do not trade until CSA is in place"
+Check 32," Check with Client Regulatory Services team to confirm If IM dates are present and correct in HUB:
+-  If correct (i.e. DQ issues) - request 3rd party approval
+- If missing - contact Client Regulatory Services team to obtain from client. Do not trade until confirmed"
+Check 33," Check with Client Regulatory Services team to confirm If the CSD is present and correct in HUB:
+-  If correct (i.e. DQ issues) - request 3rd party approval
+- If missing (i.e. CSD is not in place) - contact Legal to execute agreement with client. Do not trade until CSD is in place"
+Check 34," Check with Client Regulatory Services team to confirm If the custodian is present and correct in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+-If missing (i.e. CSD is not in place) - contact Legal to confirm custodian with client. Do not trade until custodian is in place"
+Check 35," Check with Client Regulatory Services team to confirm If the counterparty jurisdiction is mapped in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If missing (i.e. no jurisdiction is mapped) - contact Client Regulatory Services team to obtain from client. Do not trade until jurisdiction is confirmed"
+Check 36," Check with Client Regulatory Services team to confirm If the CSA is present and correct in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If missing (i.e. CSA is not in place) - contact Legal to execute agreement with client. Do not trade until CSA is in place"
+Check 37," Check with Client Regulatory Services team to confirm If IM dates are present and correct in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If missing - contact Client Regulatory Services team to obtain from client. Do not trade until confirmed"
+Check 38," Check with Client Regulatory Services team to confirm If the CSD is present and correct in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If missing (i.e. CSD is not in place) - contact Legal to execute agreement with client. Do not trade until CSD is in place"
+Check 39," Check with Client Regulatory Services team to confirm If the custodian is present and correct in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If missing (i.e. CSD is not in place) - contact Legal to confirm custodian with client. Do not trade until custodian is in place"
+Check 40," Check with Client Regulatory Services team to confirm If the counterparty jurisdiction is mapped in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If missing (i.e. no jurisdiction is mapped) - contact Client Regulatory Services team to obtain from client. Do not trade until jurisdiction is confirmed"
+Check 41," Check with Client Regulatory Services team to confirm If the CSA is present and correct in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If missing (i.e. CSA is not in place) - contact Legal to execute agreement with client. Do not trade until CSA is in place"
+Check 42," Check with Client Regulatory Services team to confirm If IM dates are present and correct in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If missing - contact Client Regulatory Services team to obtain from client. Do not trade until confirmed"
+Check 43," Check with Client Regulatory Services team to confirm If the CSD is present and correct in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If missing (i.e. CSD is not in place) - contact Legal to execute agreement with client. Do not trade until CSD is in place"
+Check 44," Check with Client Regulatory Services team to confirm If the custodian is present and correct in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If missing (i.e. CSD is not in place) - contact Legal to confirm custodian with client. Do not trade until custodian is in place"
+Check 45," Check with Client Regulatory Services team to confirm If the US Person status is present and correct in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If missing (i.e. US Person status is not in place) - contact Client Regulatory Services team to obtain from client. Do not trade until confirmed"
+Check 46," Check with Client Regulatory Services team to confirm If the counterparty is set up as a Special Entity in HUB:
+- If correct (i.e. cpty is set up as a Special Entity) - do not trade
+- If incorrect (i.e. cpty is NOT set up as a Special Entity) - request 3rd party approval"
+Check 47," Trade is mandated to clear:
+- Do not trade
+-Or change booking entity to non-BOS entity "
+Check 48," Check with Client Regulatory Services team to confirm If the counterparty is set up as a Swap Dealer in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If missing (i.e. cpty is NOT set up as a Swap Dealer) - do not trade"
+Check 49," Check with Client Regulatory Services team to confirm If the counterparty clearing category is set up in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If missing (i.e. cpty clearing category not in place) - contact Client Regulatory Services team to obtain from client. Do not trade until clearing category confirmed or the trade must be cleared"
+Check 50," Check with Client Regulatory Services team to confirm If the counterparty ATE documentation is in place in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If missing (i.e. cpty does NOT have ATE in place) - contact Client Regulatory Services team to send ATE to client. Do not trade until documentation is in place"
+Check 51," Check with Client Regulatory Services team to confirm If the counterparty CDEA documentation is in place in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If missing (i.e. cpty does NOT have CDEA in place) - contact Client Regulatory Services team to send CDEA to client. Do not trade until documentation is in place"
+Check 52," Check with Client Regulatory Services team to confirm If the counterparty MIFID classification is valid in HUB:
+- If correct (i.e. DQ issues) - select valid classification value from options provided in SPM
+- If invalid - contact Client Regulatory Services team to obtain MiFID classification from client. Do not trade until MiFID classification has been confirmed"
+Check 53," Disclose costs and charges information to clients in good time before trading by email, or paper, depending on client contact preference - self attest to the exception in SPM"
+Check 54," Check with Client Regulatory Services team to confirm If the counterparty MIFID classification is valid in HUB:
+- If correct (i.e. DQ issues) - select valid classification value from options provided in SPM
+- If invalid - contact Client Regulatory Services team to obtain MiFID classification from client. Do not trade until MiFID classification has been confirmed"
+Check 55," Check with Client Regulatory Services team to confirm If client consent is in place in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+- If missing - request the client to provide consent to trade outside a venue. Do not trade until consent has been provided or execute trade on a venue"
+Check 56," Check with Client Regulatory Services team to confirm If ToB in place in HUB:
+- If correct (i.e. DQ issues) - request 3rd party approval
+-If missing - contact Client Regulatory Services team to send ToB to client. Do not trade until client has received and understood ToB"
+Check 57," Create a SPM case by clicking on the Guardian green exception
+- On the SPM case (client page), amend the Best Execution flag to Yes to confirm best execution has been provided"
+Check 58," Check with Client Regulatory Services team to confirm If the counterparty MIFID classification is valid in HUB:
+- If correct (i.e. DQ issues) - select valid classification value from options provided in SPM
+- If invalid - contact Client Regulatory Services team to obtain MiFID classification from client. Do not trade until MiFID classification has been confirmed"
+Check 59," Check with Client Regulatory Services team to confirm the client segment in HUB:
+- Select valid segment value from options provided in SPM"
+Check 60," Check with Client Regulatory Services team to confirm the client preference in HUB:
+- Select valid value from options provided in SPM"
+Check 61, Follow existing best execution guidelines and procedures 

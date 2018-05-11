@@ -55,13 +55,7 @@ def makeWebhookResult(req):
     
     if req.get("result").get("action") == "trade_desc":
        result = req.get("result")
-       context = result.get("contexts")
-       context = json.dumps(context, indent=4)
-       context = json.loads(context)
-       print(context)
-       parameters = (context[0]['parameters'])
-       print(parameters)
-       trade_id = parameters.get("TradeID")
+       trade_id = result.get("resolvedQuery")
        print(trade_id)
        trade_df = ("trade.csv")
        with open(trade_df) as csvfile:
